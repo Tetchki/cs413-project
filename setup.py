@@ -1,6 +1,6 @@
 import os
 import subprocess
-
+import sys
 
 def install_requirements_from_top_level_submodules():
     """Install requirements from top-level requirements.txt in each submodule of ext/."""
@@ -42,8 +42,25 @@ def setup_deepLSD_weights():
         print("DeepLSD directory not found!")
 
 
+from setuptools import setup, find_packages
+
+setup(name='cs413-project', version="0.0", packages=find_packages())
+
 # Install requirements
 install_requirements_from_top_level_submodules()
 
+#Setup DeepLSD
+print("Setting up DeepLSD...")
+
 # Setup DeepLSD weights
 setup_deepLSD_weights()
+
+# Setup pyprogressivex
+print("Setting up pyprogressivex...")
+#run pip3 install -e ext/progressive-x
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", "ext/progressive-x"])
+
+# Setup pyprogressivex
+print("Setting up SSIS...")
+#python setup.py build develop in ext/SSIS
+subprocess.check_call([sys.executable, "setup.py", "build", "develop"], cwd="ext/SSIS")
