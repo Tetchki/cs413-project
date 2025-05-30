@@ -9,7 +9,7 @@ def download_file(url, dest_path):
         print(f"{os.path.basename(dest_path)} already exists, skipping download.")
 
 def setup_deepLSD_weights():
-    """Create the weights directory in ext/DeepLSD and download the necessary files if not already present."""
+    """Creates the weights directory in ext/DeepLSD and downloads the necessary files if not already present."""
     deep_lsd_dir = 'ext/DeepLSD'
     if os.path.isdir(deep_lsd_dir):
         weights_dir = os.path.join(deep_lsd_dir, 'weights')
