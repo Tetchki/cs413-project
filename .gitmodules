@@ -4,9 +4,6 @@
 [submodule "ext/DeepLSD"]
 	path = ext/DeepLSD
 	url = git@github.com:Tetchki/DeepLSD.git
-[submodule "ext/SSIS"]
-	path = ext/SSIS
-	url = git@github.com:stevewongv/SSIS.git
 [submodule "ext/Depth-Anything-V2"]
 	path = ext/Depth-Anything-V2
 	url = git@github.com:Tetchki/Depth-Anything-V2.git
