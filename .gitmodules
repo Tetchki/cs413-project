@@ -7,3 +7,12 @@
 [submodule "ext/SSIS"]
 	path = ext/SSIS
 	url = git@github.com:stevewongv/SSIS.git
+[submodule "ext/Depth-Anything-V2"]
+	path = ext/Depth-Anything-V2
+	url = git@github.com:Tetchki/Depth-Anything-V2.git
+[submodule "ext/PerspectiveFields"]
+	path = ext/PerspectiveFields
+	url = git@github.com:Tetchki/PerspectiveFields.git
+[submodule "ext/GeoCalib"]
+	path = ext/GeoCalib
+	url = git@github.com:Tetchki/GeoCalib.git
