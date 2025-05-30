@@ -21,7 +21,38 @@ cd cs413-project
    ```bash
    python3 download_deeplsd_weights.py
    ```
+### 🧱 Manual Setup for DeepLSD Weights (Optional)
 
+If you prefer to download the weights manually instead of using `python3 download_deeplsd_weights.py`, follow these steps:
+
+1. **Ensure the DeepLSD submodule is initialized:**
+
+   * Confirm that the folder `ext/DeepLSD` exists. If it doesn’t, run:
+
+     ```bash
+     git submodule update --init --recursive
+     ```
+
+2. **Create the weights folder:**
+
+   * Inside the `ext/DeepLSD` directory, create a subfolder named `weights`.
+   * The folder structure should look like this:
+
+     ```
+     ext/
+       └── DeepLSD/
+           └── weights/
+           └── ...
+     ```
+
+3. **Download the required model files:**
+
+   * [deeplsd\_wireframe.tar](https://cvg-data.inf.ethz.ch/DeepLSD/deeplsd_wireframe.tar)
+   * [deeplsd\_md.tar](https://cvg-data.inf.ethz.ch/DeepLSD/deeplsd_md.tar)
+
+4. **Move the downloaded files into the `weights/` folder:**
+
+   * Place both `.tar` files into `ext/DeepLSD/weights/`.
 ## 📁 Data
 
 * The `data/` directory contains the datasets used for finetuning and evaluation.
