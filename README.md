@@ -56,7 +56,8 @@ If you prefer to download the weights manually instead of using `python3 downloa
 ## 📁 Data
 
 * The `data/` directory contains the datasets used for finetuning and evaluation.
-* YOu can download the full data folder from [here](https://drive.google.com/drive/folders/1KE5jK0FZSqztiJwzxzEN0hkqLp3hMu_C?usp=sharing).
+* You can download the full data folder from [here](https://drive.google.com/drive/folders/1KE5jK0FZSqztiJwzxzEN0hkqLp3hMu_C?usp=sharing).
+* The `data/synthbuster/keep` folder contains the 100 hand-picked building examples from the Synthbuster dataset that fit our scene geometry assumptions. If you want you can download the full Synthbuster dataset from [here](https://zenodo.org/records/10066460). Put its content inside the `data/synthbuster/` folder.
 * Use the `extract_dataset.ipynb` notebook to hand-pick building examples from the Synthbuster dataset that fit our scene geometry assumptions.
 
 ## 📷 Camera Calibration Experiments
