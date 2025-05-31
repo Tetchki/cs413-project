@@ -3,24 +3,66 @@
 We use vanishing points and camera intrinsics to extract the dominant manhattan frame in an image to test the orthogonality constraints expected from real-world architectures. This method obtained an F1-Score of 0.75 on a mixed real/generated images handmade benchmark. This method showed signs of robustness to resampling, a common weakness of classical learning-based detectors, although more work is needed to explore it.
 ## 🛠 Installation
 
+> **Tested with:**
+> * **Ubuntu** 24.04
+> * **Python** 3.12
+> * **CUDA** 12.6
+
+Clone the repository and set up the environment:
+
 ```bash
 git clone --recurse-submodules git@github.com:Tetchki/cs413-project.git
 cd cs413-project
 ```
+1. **Create a Python 3.12 virtual environment**
 
-1. Create a Python 3.12 virtual environment.
+2. **Install pip-tools**
 
-2. Install dependencies:
+    This project uses [`pip-tools`](https://github.com/jazzband/pip-tools) to manage dependencies in a reproducible way.
+   ```bash
+   pip install pip-tools
+   ```
+3. **Compile requirements.txt from requirements.in**
+   
+    Resolves all dependencies from `requirements.in` into a fully pinned `requirements.txt`.
+    
+    *Note: This may take a while.*
+   ```bash
+   pip-compile --verbose requirements.in
+   ```
+4. **Install dependencies**
 
+   Install all dependencies and their exact versions as specified in `requirements.txt`.
+
+    *Note: This may take a while.*
    ```bash
    pip install -r requirements.txt
    ```
+---
 
-3. Download DeepLSD model weights:
+## Running the Demo
 
-   ```bash
-   python3 download_deeplsd_weights.py
-   ```
+The demo is provided in the Jupyter notebook called **`playground.ipynb`**. It runs on two example images located in the **`data/`** folder.
+
+To run the demo:
+
+1. Open `playground.ipynb` in Jupyter.
+2. Run the cells sequentially to execute the full pipeline on the sample images.
+
+You can pass `verbose=True` to the main pipeline function if you want to see intermediate results and detailed information about each processing step.
+
+Make sure all dependencies are installed and the `data/` folder contains the required images before running the notebook.
+
+---
+
+## Download DeepLSD Model Weights
+
+Some code in this project requires pre-trained weights for DeepLSD. Download them with:
+
+```bash
+python3 download_deeplsd_weights.py
+```
+
 ### 🧱 Manual Setup for DeepLSD Weights (Optional)
 
 If you prefer to download the weights manually instead of using `python3 download_deeplsd_weights.py`, follow these steps:

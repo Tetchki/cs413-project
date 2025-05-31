@@ -1,5 +1,4 @@
 -r ext/DeepLSD/requirements.txt
 -e ext/progressive-x
--r ext/Depth-Anything-V2/requirements.txt
 -e ext/PerspectiveFields
 -e ext/GeoCalib
