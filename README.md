@@ -38,30 +38,14 @@ cd cs413-project
    ```bash
    pip install -r requirements.txt
    ```
----
+   
+5. **Install the DeepLSD submodule**
 
-## Running the Demo
+   Some code in this project requires pre-trained weights for DeepLSD. Download them with:
 
-The demo is provided in the Jupyter notebook called **`playground.ipynb`**. It runs on two example images located in the **`data/`** folder.
-
-To run the demo:
-
-1. Open `playground.ipynb` in Jupyter.
-2. Run the cells sequentially to execute the full pipeline on the sample images.
-
-You can pass `verbose=True` to the main pipeline function if you want to see intermediate results and detailed information about each processing step.
-
-Make sure all dependencies are installed and the `data/` folder contains the required images before running the notebook.
-
----
-
-## Download DeepLSD Model Weights
-
-Some code in this project requires pre-trained weights for DeepLSD. Download them with:
-
-```bash
-python3 download_deeplsd_weights.py
-```
+   ```bash
+   python3 download_deeplsd_weights.py
+   ```
 
 ### 🧱 Manual Setup for DeepLSD Weights (Optional)
 
@@ -95,6 +79,24 @@ If you prefer to download the weights manually instead of using `python3 downloa
 4. **Move the downloaded files into the `weights/` folder:**
 
    * Place both `.tar` files into `ext/DeepLSD/weights/`.
+
+---
+
+## Running the Demo
+
+The demo is provided in the Jupyter notebook called **`playground.ipynb`**. It runs on two example images located in the **`data/`** folder.
+
+To run the demo:
+
+1. Open `playground.ipynb` in Jupyter.
+2. Run the cells sequentially to execute the full pipeline on the sample images.
+
+You can pass `verbose=True` to the main pipeline function if you want to see intermediate results and detailed information about each processing step.
+
+Make sure all dependencies are installed and the `data/` folder contains the required images before running the notebook.
+
+---
+
 ## 📁 Data
 
 * The `data/` directory contains the datasets used for finetuning and evaluation.
